@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 
 const app = express(); 
-// App_port = 3000;
+// const App_port = process.env.App_port || 3000;
 
 require('dotenv').config();
 
@@ -12,7 +12,7 @@ app.use(express.json());
 
 
 const connectDB = require('./config/db');
-connectDB();
+connectDB(); 
 // console.log(connectDB);
 
 //template engine
